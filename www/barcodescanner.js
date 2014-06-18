@@ -6,6 +6,7 @@
  * Copyright (c) 2011, IBM Corporation
  */
 
+cordova.define("com.phonegap.plugins.barcodescanner.barcodescanner", function(require, exports, module) {
 
         var exec = require("cordova/exec");
 
@@ -84,4 +85,4 @@
 
         var barcodeScanner = new BarcodeScanner();
         module.exports = barcodeScanner;
-
+});
