@@ -5,8 +5,24 @@
  * Copyright (c) Matt Kane 2010
  * Copyright (c) 2011, IBM Corporation
  */
+/***
+**	exemple
+		   window.barcodeScanner.scan(
+			  function (result) {
+				  alert("We got a barcode\n" +
+						"Result: " + result.text + "\n" +
+						"Format: " + result.format + "\n" +
+						"Cancelled: " + result.cancelled + "\n"+
+						JSON.stringify(result));
+			  }, 
+			  function (error) {
+				  alert("Scanning failed: " + error);
+			  }
+		   );
 
-cordova.define("com.phonegap.plugins.barcodescanner.barcodescanner", function(require, exports, module) {
+
+**/
+//cordova.define("com.phonegap.plugins.barcodescanner.barcodescanner", function(require, exports, module) {
 
         var exec = require("cordova/exec");
 
@@ -85,4 +101,4 @@ cordova.define("com.phonegap.plugins.barcodescanner.barcodescanner", function(re
 
         var barcodeScanner = new BarcodeScanner();
         module.exports = barcodeScanner;
-});
+//});
