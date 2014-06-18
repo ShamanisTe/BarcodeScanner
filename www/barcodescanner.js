@@ -9,11 +9,15 @@
 **	exemple
 		   window.barcodeScanner.scan(
 			  function (result) {
-				  alert("We got a barcode\n" +
+				// Preventbug with return
+				setTimeout(function(){
+						alert("We got a barcode\n" +
 						"Result: " + result.text + "\n" +
 						"Format: " + result.format + "\n" +
 						"Cancelled: " + result.cancelled + "\n"+
 						JSON.stringify(result));
+				},0);
+
 			  }, 
 			  function (error) {
 				  alert("Scanning failed: " + error);
